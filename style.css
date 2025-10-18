@@ -1,0 +1,205 @@
+/* Variáveis de Cores */
+:root {
+    --color-dark: #121212; /* Preto Escuro */
+    --color-green: #00FF41; /* Verde Neon */
+    --color-light-green: #39FF14; /* Verde Mais Claro */
+    --color-text: #E0E0E0; /* Texto Claro */
+    --color-accent: #007bff; /* Azul de Destaque (pode ser ajustado) */
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace; /* Fonte tecnológica/moderna */
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header/Hero Section */
+.hero {
+    background-color: #0d0d0d;
+    color: var(--color-green);
+    text-align: center;
+    padding: 80px 0;
+    border-bottom: 3px solid var(--color-light-green);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(0, 255, 65, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px var(--color-light-green));
+}
+
+.hero h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5em;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px var(--color-light-green);
+}
+
+.hero h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--color-light-green);
+}
+
+.info-tag {
+    display: inline-block;
+    background-color: var(--color-green);
+    color: var(--color-dark);
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 0 8px var(--color-green);
+}
+
+/* Seções de Conteúdo */
+section {
+    padding: 60px 0;
+}
+
+.section-description {
+    background-color: var(--color-dark);
+    border-bottom: 1px dashed #333;
+}
+
+.section-description h3 {
+    color: var(--color-light-green);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-description p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Seção de Grupos */
+.section-groups {
+    background-color: #0d0d0d;
+}
+
+.section-groups h3 {
+    color: var(--color-green);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.section-groups .subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #aaa;
+}
+
+.groups-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.group-card {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.group-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0, 255, 65, 0.3);
+}
+
+.group-card h4 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-light-green);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.group-card .tema {
+    font-style: italic;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.group-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.group-card ul li {
+    background-color: #2a2a2a;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+.group-card ul li::before {
+    content: '»';
+    color: var(--color-green);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-dark);
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid var(--color-green);
+    color: #666;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin: 5px 0;
+}
